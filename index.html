@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor B. | Cybersecurity Student & Automation Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#080c14',
+                            card: '#0f172a',
+                            border: '#1e293b',
+                            cyan: '#00f0ff',
+                            red: '#ff2a6d',
+                            green: '#00ff9d',
+                            text: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar & Glow effects */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #080c14; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f0ff; }
+        
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+        }
+        .glow-red {
+            box-shadow: 0 0 20px rgba(255, 42, 109, 0.15);
+        }
+        .border-glow:hover {
+            border-color: #00f0ff;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+        }
+        .bg-grid {
+            background-size: 30px 30px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-cyber-bg text-slate-100 font-sans antialiased selection:bg-cyber-cyan selection:text-black bg-grid min-h-screen flex flex-col justify-between">
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-cyber-bg/80 border-b border-cyber-border">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-mono font-bold text-lg tracking-wider flex items-center gap-2 group">
+                <span class="text-cyber-cyan group-hover:text-cyber-red transition-colors">&gt;</span>
+                <span class="text-white">victor</span><span class="text-cyber-cyan">.b_</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-mono text-sm">
+                <a href="#about" class="text-cyber-text hover:text-cyber-cyan transition-colors">// 01. about</a>
+                <a href="#skills" class="text-cyber-text hover:text-cyber-cyan transition-colors">// 02. skills</a>
+                <a href="#projects" class="text-cyber-text hover:text-cyber-cyan transition-colors">// 03. projects</a>
+                <a href="#freelance" class="text-cyber-text hover:text-cyber-cyan transition-colors">// 04. freelance</a>
+            </nav>
+
+            <!-- Upwork Quick Link -->
+            <a href="https://github.com/victor8467" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-2 text-xs font-mono font-semibold rounded-lg bg-cyber-card border border-cyber-cyan/40 text-cyber-cyan hover:bg-cyber-cyan hover:text-black transition-all duration-300 flex items-center gap-2 glow-cyan">
+                <i class="fa-brands fa-github text-sm"></i>
+                <span>GitHub Profile</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
+
+        <!-- Hero Section -->
+        <section id="about" class="pt-8 md:pt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-card border border-cyber-green/30 text-cyber-green text-xs font-mono">
+                    <span class="w-2 h-2 rounded-full bg-cyber-green animate-pulse"></span>
+                    <span>Available for Freelance & Scripting Projects</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    Victor B.
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-cyber-red text-2xl sm:text-3xl lg:text-4xl font-mono mt-2">
+                        Python Automation & Luau Scripter
+                    </span>
+                </h1>
+
+                <p class="text-cyber-text text-base sm:text-lg leading-relaxed max-w-2xl">
+                    Cybersecurity student specializing in writing <span class="text-white font-medium">clean, reliable, and secure code</span>. I automate repetitive tasks, parse complex data, build custom Luau mechanics for Roblox Studio, and implement algorithms from scratch.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 rounded-lg bg-cyber-cyan text-black font-semibold text-sm hover:bg-white transition-all shadow-lg shadow-cyber-cyan/20 flex items-center gap-2">
+                        <span>View Projects</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="#freelance" class="px-6 py-3 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-red text-white text-sm font-semibold transition-all hover:shadow-lg hover:shadow-cyber-red/20 flex items-center gap-2">
+                        <span>Hire on Upwork</span>
+                        <i class="fa-solid fa-bolt text-cyber-red"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Terminal Window Preview -->
+            <div class="lg:col-span-5">
+                <div class="rounded-xl border border-cyber-border bg-cyber-card overflow-hidden shadow-2xl font-mono text-sm">
+                    <!-- Terminal Header -->
+                    <div class="px-4 py-3 bg-slate-900 border-b border-cyber-border flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                        </div>
+                        <span class="text-xs text-slate-400">victor@utm-lab:~</span>
+                    </div>
+                    <!-- Terminal Body -->
+                    <div class="p-4 space-y-3 min-h-[240px] text-xs sm:text-sm">
+                        <div class="flex items-center gap-2 text-slate-400">
+                            <span class="text-cyber-cyan">$</span>
+                            <span id="typed-cmd">whoami</span>
+                        </div>
+                        <div class="text-cyber-text leading-relaxed pl-4 border-l-2 border-cyber-cyan/40">
+                            Cybersecurity Student @ UTM Moldova.<br>
+                            Focus: Automation, Log Analysis, Roblox Mechanics, C Systems.
+                        </div>
+
+                        <div class="flex items-center gap-2 text-slate-400 pt-2">
+                            <span class="text-cyber-cyan">$</span>
+                            <span>cat stats.json</span>
+                        </div>
+                        <div class="text-cyber-green pl-4 font-mono text-xs">
+                            {<br>
+                            &nbsp;&nbsp;"code_quality": "Clean & Documented",<br>
+                            &nbsp;&nbsp;"turnaround": "Fast (< 24-48h)",<br>
+                            &nbsp;&nbsp;"location": "Chisinau, MD (UTC+2)"<br>
+                            }
+                        </div>
+
+                        <!-- Interactive Command buttons -->
+                        <div class="pt-3 border-t border-cyber-border/50 flex flex-wrap gap-2">
+                            <button onclick="runCommand('skills')" class="px-2 py-1 text-xs rounded bg-slate-800 hover:bg-cyber-cyan/20 text-cyber-cyan border border-cyber-cyan/30 transition-colors">
+                                run --skills
+                            </button>
+                            <button onclick="runCommand('contact')" class="px-2 py-1 text-xs rounded bg-slate-800 hover:bg-cyber-red/20 text-cyber-red border border-cyber-red/30 transition-colors">
+                                run --contact
+                            </button>
+                        </div>
+                        <div id="cmd-output" class="text-xs text-cyber-cyan pt-1 italic hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="space-y-8">
+            <div class="border-l-4 border-cyber-cyan pl-4">
+                <h2 class="text-2xl sm:text-3xl font-bold font-mono text-white">02. Technical Arsenal</h2>
+                <p class="text-cyber-text text-sm mt-1">Core languages, tools, and environments I work with daily.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Python -->
+                <div class="p-4 rounded-xl bg-cyber-card border border-cyber-border border-glow transition-all duration-300 space-y-2">
+                    <div class="text-cyber-cyan text-2xl"><i class="fa-brands fa-python"></i></div>
+                    <div class="font-bold text-sm text-white">Python</div>
+                    <div class="text-xs text-cyber-text">Automation, Scraping, Web Bots, Log Analysis</div>
+                </div>
+
+                <!-- C -->
+                <div class="p-4 rounded-xl bg-cyber-card border border-cyber-border border-glow transition-all duration-300 space-y-2">
+                    <div class="text-cyber-red text-2xl"><i class="fa-solid fa-code"></i></div>
+                    <div class="font-bold text-sm text-white">C Language</div>
+                    <div class="text-xs text-cyber-text">Memory Management, Low-level Cryptography</div>
+                </div>
+
+                <!-- Luau -->
+                <div class="p-4 rounded-xl bg-cyber-card border border-cyber-border border-glow transition-all duration-300 space-y-2">
+                    <div class="text-cyber-cyan text-2xl"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="font-bold text-sm text-white">Luau / Roblox</div>
+                    <div class="text-xs text-cyber-text">Pathfinding AI, ProximityPrompts, UI Logic</div>
+                </div>
+
+                <!-- Bash -->
+                <div class="p-4 rounded-xl bg-cyber-card border border-cyber-border border-glow transition-all duration-300 space-y-2">
+                    <div class="text-cyber-green text-2xl"><i class="fa-solid fa-terminal"></i></div>
+                    <div class="font-bold text-sm text-white">Bash & Linux</div>
+                    <div class="text-xs text-cyber-text">CLI Tooling, Log Extraction, Shell Scripts</div>
+                </div>
+
+                <!-- Web Scraping -->
+                <div class="p-4 rounded-xl bg-cyber-card border border-cyber-border border-glow transition-all duration-300 space-y-2">
+                    <div class="text-yellow-400 text-2xl"><i class="fa-solid fa-spider"></i></div>
+                    <div class="font-bold text-sm text-white">Data Extraction</div>
+                    <div class="text-xs text-cyber-text">BeautifulSoup, Requests, CSV/JSON Parsing</div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="p-4 rounded-xl bg-cyber-card border border-cyber-border border-glow transition-all duration-300 space-y-2">
+                    <div class="text-cyber-red text-2xl"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="font-bold text-sm text-white">Cybersecurity</div>
+                    <div class="text-xs text-cyber-text">Auth Audit, Ciphers, Log Forensic Basics</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="space-y-8">
+            <div class="border-l-4 border-cyber-red pl-4 flex items-center justify-between">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold font-mono text-white">03. Featured Projects</h2>
+                    <p class="text-cyber-text text-sm mt-1">Real-world applications, security tools, and mechanics.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Project 1: Security Log Parser -->
+                <div class="rounded-xl bg-cyber-card border border-cyber-border hover:border-cyber-cyan/60 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-cyber-cyan px-2.5 py-1 rounded bg-cyber-cyan/10 border border-cyber-cyan/30">Python + Bash</span>
+                            <i class="fa-solid fa-file-shield text-cyber-cyan text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyber-cyan transition-colors">
+                            Security Log Parser & Automation Tool
+                        </h3>
+                        <p class="text-cyber-text text-xs sm:text-sm leading-relaxed">
+                            A lightweight CLI tool designed to analyze Linux system authentication logs (`/var/log/auth.log`). Automatically flags brute-force SSH attempts, parses IP addresses, and exports summary reports.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-1 font-mono">
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> Regex-based SSH log parsing</li>
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> Automatic IP frequency threshold alerts</li>
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> CSV & JSON report generation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Code Preview Footer -->
+                    <div class="p-4 bg-slate-950/60 border-t border-cyber-border">
+                        <button onclick="toggleCode('code-1')" class="w-full text-xs font-mono text-slate-400 hover:text-cyber-cyan flex items-center justify-between">
+                            <span><i class="fa-solid fa-code text-xs mr-1"></i> View Code Snippet</span>
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                        <pre id="code-1" class="hidden mt-3 p-3 bg-slate-900 rounded text-[11px] font-mono text-cyber-text overflow-x-auto border border-cyber-border"><code>import re
+
+def parse_ssh_failures(log_path):
+    pattern = r"Failed password for .* from (\d+\.\d+\.\d+\.\d+)"
+    attempts = {}
+    with open(log_path, 'r') as f:
+        for line in f:
+            match = re.search(pattern, line)
+            if match:
+                ip = match.group(1)
+                attempts[ip] = attempts.get(ip, 0) + 1
+    return {ip: count for ip, count in attempts.items() if count > 5}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Project 2: Cryptographic Suite -->
+                <div class="rounded-xl bg-cyber-card border border-cyber-border hover:border-cyber-red/60 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-cyber-red px-2.5 py-1 rounded bg-cyber-red/10 border border-cyber-red/30">C & Python</span>
+                            <i class="fa-solid fa-key text-cyber-red text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyber-red transition-colors">
+                            Cryptographic Algorithm Suite
+                        </h3>
+                        <p class="text-cyber-text text-xs sm:text-sm leading-relaxed">
+                            From-scratch implementations of fundamental ciphers (Caesar, Vigenère, DES basics). Built to demonstrate low-level memory manipulation, bitwise operations, and custom character set mapping.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-1 font-mono">
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> Memory allocation & pointer logic in C</li>
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> Bitwise XOR and shift operations</li>
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> Diacritics & UTF-8 character support</li>
+                        </ul>
+                    </div>
+
+                    <!-- Code Preview Footer -->
+                    <div class="p-4 bg-slate-950/60 border-t border-cyber-border">
+                        <button onclick="toggleCode('code-2')" class="w-full text-xs font-mono text-slate-400 hover:text-cyber-red flex items-center justify-between">
+                            <span><i class="fa-solid fa-code text-xs mr-1"></i> View Code Snippet</span>
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                        <pre id="code-2" class="hidden mt-3 p-3 bg-slate-900 rounded text-[11px] font-mono text-cyber-text overflow-x-auto border border-cyber-border"><code>// C Vigenere Cipher Logic
+void encrypt_vigenere(char* text, const char* key) {
+    int textLen = strlen(text);
+    int keyLen = strlen(key);
+    for (int i = 0, j = 0; i < textLen; ++i) {
+        if (isalpha(text[i])) {
+            char base = isupper(text[i]) ? 'A' : 'a';
+            char kbase = isupper(key[j % keyLen]) ? 'A' : 'a';
+            text[i] = (text[i] - base + (key[j % keyLen] - kbase)) % 26 + base;
+            j++;
+        }
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Project 3: Roblox Luau Mechanics -->
+                <div class="rounded-xl bg-cyber-card border border-cyber-border hover:border-cyber-cyan/60 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-cyber-cyan px-2.5 py-1 rounded bg-cyber-cyan/10 border border-cyber-cyan/30">Luau / Roblox Studio</span>
+                            <i class="fa-solid fa-cubes text-cyber-cyan text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyber-cyan transition-colors">
+                            Dynamic AI Pathfinding & Gameplay Modules
+                        </h3>
+                        <p class="text-cyber-text text-xs sm:text-sm leading-relaxed">
+                            Modular gameplay scripts for Roblox games. Includes enemy NPC pathfinding logic, keycard security door systems using `ProximityPrompt`, and smooth UI transitions.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-1 font-mono">
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> PathfindingService & Raycasting for AI</li>
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> ProximityPrompt + Keycard security</li>
+                            <li><i class="fa-solid fa-check text-cyber-green mr-1"></i> Optimized TweenService animations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Code Preview Footer -->
+                    <div class="p-4 bg-slate-950/60 border-t border-cyber-border">
+                        <button onclick="toggleCode('code-3')" class="w-full text-xs font-mono text-slate-400 hover:text-cyber-cyan flex items-center justify-between">
+                            <span><i class="fa-solid fa-code text-xs mr-1"></i> View Code Snippet</span>
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                        <pre id="code-3" class="hidden mt-3 p-3 bg-slate-900 rounded text-[11px] font-mono text-cyber-text overflow-x-auto border border-cyber-border"><code>-- Roblox Luau Door Script
+local TweenService = game:GetService("TweenService")
+local prompt = script.Parent.ProximityPrompt
+local doorPart = script.Parent.Door
+
+prompt.Triggered:Connect(function(player)
+    if player.Backpack:FindFirstChild("Keycard") then
+        local goal = {CFrame = doorPart.CFrame * CFrame.new(0, 5, 0)}
+        local tween = TweenService:Create(doorPart, TweenInfo.new(1), goal)
+        tween:Play()
+    end
+end)</code></pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Freelance Services Section -->
+        <section id="freelance" class="rounded-2xl bg-gradient-to-br from-cyber-card to-slate-900 border border-cyber-border p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-cyber-cyan/5 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="max-w-3xl space-y-6">
+                <div class="inline-block px-3 py-1 rounded-md bg-cyber-red/10 border border-cyber-red/30 text-cyber-red font-mono text-xs">
+                    // Ready for Client Orders
+                </div>
+                
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Need a custom Python script or Roblox mechanic?
+                </h2>
+                
+                <p class="text-cyber-text text-sm sm:text-base leading-relaxed">
+                    I deliver self-contained, documented code that solves your exact issue quickly. No bloated frameworks, no unnecessary delays.
+                </p>
+
+                <!-- Service offerings list -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-3 rounded-lg bg-cyber-bg/60 border border-cyber-border flex items-start gap-3">
+                        <i class="fa-solid fa-robot text-cyber-cyan text-lg mt-0.5"></i>
+                        <div>
+                            <div class="text-sm font-bold text-white">Python Automation</div>
+                            <div class="text-xs text-cyber-text">Data scraping, Telegram bots, CSV/PDF utilities.</div>
+                        </div>
+                    </div>
+                    <div class="p-3 rounded-lg bg-cyber-bg/60 border border-cyber-border flex items-start gap-3">
+                        <i class="fa-solid fa-wand-magic-sparkles text-cyber-red text-lg mt-0.5"></i>
+                        <div>
+                            <div class="text-sm font-bold text-white">Roblox / Luau Bug Fixes</div>
+                            <div class="text-xs text-cyber-text">NPC Pathfinding, UI logic, interactive prompts.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upwork Badge -->
+                <div class="pt-4 flex flex-wrap items-center gap-4">
+                    <a href="https://github.com/victor8467" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-cyber-cyan text-black font-semibold text-sm hover:bg-white transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-github text-base"></i>
+                        <span>Visit GitHub Profile</span>
+                    </a>
+                    <button onclick="copyEmail()" class="px-5 py-3 rounded-lg bg-slate-800 border border-cyber-border hover:border-cyber-cyan text-white text-sm font-mono transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-copy text-cyber-cyan"></i>
+                        <span id="email-btn-text">Copy Direct Contact</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-cyber-border bg-slate-950 py-8 mt-20 text-xs font-mono text-cyber-text">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 <span class="text-white font-bold">Victor B.</span> — Cybersecurity Student & Freelancer.
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/victor8467" target="_blank" rel="noopener noreferrer" class="hover:text-cyber-cyan transition-colors">GitHub: victor8467</a>
+                <span class="text-slate-700">|</span>
+                <span class="text-cyber-green">● Upwork Ready</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Scripts -->
+    <script>
+        // Copy contact info helper
+        function copyEmail() {
+            const btnText = document.getElementById('email-btn-text');
+            const contactText = "victor8467 (GitHub)";
+            
+            // Clipboard functionality standard
+            const tempInput = document.createElement('input');
+            tempInput.value = contactText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            btnText.innerText = "Copied to Clipboard!";
+            setTimeout(() => {
+                btnText.innerText = "Copy Direct Contact";
+            }, 2500);
+        }
+
+        // Toggle code snippets in project cards
+        function toggleCode(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        // Interactive terminal command simulator
+        function runCommand(cmd) {
+            const output = document.getElementById('cmd-output');
+            output.classList.remove('hidden');
+            
+            if (cmd === 'skills') {
+                output.innerText = "> Loading skills... [Python, C, Luau, Bash, Web Scraping, Linux Security]";
+            } else if (cmd === 'contact') {
+                output.innerText = "> Contact: GitHub @victor8467 | Available on Upwork for micro-gigs";
+            }
+        }
+    </script>
+</body>
+</html>
